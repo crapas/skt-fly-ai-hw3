@@ -1,15 +1,15 @@
 # 베이스 이미지 설정
-FROM python:3.9-slim
+FROM python:3.10
 
 # 작업 디렉토리 설정
 WORKDIR /app
 
 # 필요한 파일 복사
-COPY recognition.py /app
-COPY cifar_net.pth /app
+COPY infer.py /app/infer.py
+COPY model/cifar_net.pth /app/model/cifar_net.pth
 
 # 필요한 패키지 설치
-RUN pip install torch torchvision pillow
+RUN pip install torch torchvision
 
-# 컨테이너 실행 시 실행할 명령어
-CMD [ "python", "recognition.py" ]
+# 실행 명령어 설정
+CMD ["python", "infer.py"]
