@@ -2,13 +2,9 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
-COPY requirements.txt /app
-
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app.py /app
-COPY infer.py /app
-COPY train.py /app
-COPY model/cifar_net.pth /app/model/
+COPY . .
 
 CMD ["python", "app.py"]
