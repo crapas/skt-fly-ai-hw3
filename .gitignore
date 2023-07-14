@@ -6,4 +6,4 @@ env/
 data/
 
 # 테스트 관련 파일
-tests/__pycache__/
+__pycache__/
