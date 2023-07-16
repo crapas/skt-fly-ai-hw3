@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Image Upload</title>
+		<title>Image Detect Site</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
 	</head>
 	<body>
-		<h1>Image Upload</h1>
-		<form action="/predict" method="post" enctype="multipart/form-data">
-			<input type="file" name="image" accept="image/*" required />
-			<br />
-			<input type="submit" value="Upload" />
-		</form>
+		<div class="container">
+			<header>
+				<h1 class="title">이미지 판별 사이트</h1>
+				<h3 class-'sub'>해당 사이트는 이미지를 분류할 수 있습니다.</h3>
+			</header>
+			<main>
+				<p class='desc'>원하는 실물 이미지를 가져와주세요.(비행기, 차, 새, 고양이, 사슴, 개, 개구리, 말, 배, 트럭 판별 가능)</p>
+				<form action="/predict" method="post" enctype="multipart/form-data">
+					<input type="file" name="image" accept="image/*" required />
+					<br />
+					<input class='submit' type="submit" value="Upload" />
+				</form>
+			</main>
+			<footer>
+				<p>SKT FLY AI 3기 패기반 임채은</p>
+			</footer>
+		</div>
 	</body>
 </html>

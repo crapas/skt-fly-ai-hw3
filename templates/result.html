@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Prediction Result</title>
+		<title>이미지 판별 결과</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}" />
 	</head>
 	<body>
-		<h1>Prediction Result</h1>
-		<p>Result: {{ result }}</p>
+		<div class="container">
+			<header>
+				<h1 class="title">Prediction Result</h1>
+			</header>
+			<main>
+				<p class="desc">Result: {{ result }}</p>
+			</main>
+			<footer>
+				<p>SKT FLY AI 3기 패기반 임채은</p>
+			</footer>
+		</div>
 	</body>
 </html>
